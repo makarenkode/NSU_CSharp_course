@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\a.sergeev\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\a.sergeev\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_ExternalApi.1075044054.00" t="ExcludeRecursive" />
+    <e p="C:\Users\a.sergeev\AppData\Roaming\JetBrains\Rider2020.3\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\a.sergeev\AppData\Roaming\JetBrains\Rider2020.3\scratches" t="IncludeRecursive" />
+    <e p="C:\Work\CSCourse\DMakarenko\ExternalApi" t="IncludeFlat">
+      <e p="ExternalApi" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Consumer" t="Include">
+          <e p="BookConsumer.cs" t="Include" />
+        </e>
+        <e p="ContractLibrary" t="Include">
+          <e p="IBookContract.cs" t="Include" />
+          <e p="IBookListContract.cs" t="Include" />
+        </e>
+        <e p="Controllers" t="Include">
+          <e p="BookController.cs" t="Include" />
+        </e>
+        <e p="ExternalApi.csproj" t="IncludeRecursive" />
+        <e p="JsonModels" t="Include">
+          <e p="JsonBook.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="ExternalApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Producer" t="Include">
+          <e p="BookContract.cs" t="Include" />
+          <e p="BookProducer.cs" t="Include" />
+          <e p="MassTransitConfiguration.cs" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="ApiService.cs" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="ExternalApi.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
