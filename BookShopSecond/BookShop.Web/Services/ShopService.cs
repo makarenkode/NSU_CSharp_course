@@ -9,8 +9,6 @@ namespace BookShop.Web.Services
 
         public ShopService(BookShopContextDbContextFactory dbContextFactory)
         {
-            #warning контекст лучше всё-таки получать непосредственно перед обращением к нему
-            #warning исправил
             _dbContextFactory = dbContextFactory;
         }
 
@@ -21,6 +19,7 @@ namespace BookShop.Web.Services
         }
         #warning неиспользуемый метод
         #warning используется в BookService при продаже книги(метод SellBook)
+        #warning  http://prntscr.com/wnce9o
         public async Task AddMoneyAsync (decimal money)
         {
             var bsContext = _dbContextFactory.GetContext();

@@ -6,44 +6,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a06d2be1-6bba-4ee5-8e4f-b6d832d1f062" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/BookShop.Test/obj/BookShop.Test.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Test/obj/BookShop.Test.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Test/obj/BookShop.Test.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Test/obj/BookShop.Test.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Test/obj/Debug/netcoreapp3.1/BookShop.Test.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Test/obj/Debug/netcoreapp3.1/BookShop.Test.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Test/obj/Debug/netcoreapp3.1/BookShop.Test.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Test/obj/Debug/netcoreapp3.1/BookShop.Test.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Test/obj/Debug/netcoreapp3.1/BookShop.Test.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Test/obj/Debug/netcoreapp3.1/BookShop.Test.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Test/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Test/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Test/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Test/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/ContractLibrary/IBookContract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/ContractLibrary/IBookContract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BookShopSecond/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BookShopSecond/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BookShopSecond/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BookShopSecond/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookShop.Web/Controllers/BookController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Controllers/BookController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/Jobs/SimpleJob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Jobs/SimpleJob.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookShop.Web/Jobs/CheckOrderNeedJob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Jobs/CheckOrderNeedJob.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookShop.Web/Services/BookService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Services/BookService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookShop.Web/Services/ShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Services/ShopService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookShop.Web/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/obj/BookShop.Web.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/obj/BookShop.Web.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/obj/BookShop.Web.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/obj/BookShop.Web.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/obj/Debug/netcoreapp3.1/BookShop.Web.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/obj/Debug/netcoreapp3.1/BookShop.Web.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/obj/Debug/netcoreapp3.1/BookShop.Web.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/obj/Debug/netcoreapp3.1/BookShop.Web.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/obj/Debug/netcoreapp3.1/BookShop.Web.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/obj/Debug/netcoreapp3.1/BookShop.Web.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookShopSecond/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShopSecond/Book.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShopSecond/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShopSecond/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShopSecond/obj/BookShopSecond.Data.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BookShopSecond/obj/BookShopSecond.Data.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShopSecond/obj/BookShopSecond.Data.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/BookShopSecond/obj/BookShopSecond.Data.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShopSecond/obj/Debug/netcoreapp3.1/BookShopSecond.Data.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShopSecond/obj/Debug/netcoreapp3.1/BookShopSecond.Data.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShopSecond/obj/Debug/netcoreapp3.1/BookShopSecond.Data.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BookShopSecond/obj/Debug/netcoreapp3.1/BookShopSecond.Data.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShopSecond/obj/Debug/netcoreapp3.1/BookShopSecond.Data.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BookShopSecond/obj/Debug/netcoreapp3.1/BookShopSecond.Data.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShopSecond/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/BookShopSecond/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShopSecond/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BookShopSecond/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ExternalApi/ExternalApi/Services/ApiService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ExternalApi/ExternalApi/Services/ApiService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/Debug/netcoreapp3.1/ExternalApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/Debug/netcoreapp3.1/ExternalApi.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/Debug/netcoreapp3.1/ExternalApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/Debug/netcoreapp3.1/ExternalApi.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/Debug/netcoreapp3.1/ExternalApi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/Debug/netcoreapp3.1/ExternalApi.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/ExternalApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/ExternalApi.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/ExternalApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/ExternalApi.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ExternalApi/ExternalApi/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookShopSecond/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShopSecond/Shop.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,14 +27,17 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/BookShop.Web/Jobs/SimpleJob.cs" />
-      <option value="$PROJECT_DIR$/BookShopSecond/Book.cs" />
       <option value="$PROJECT_DIR$/BookShop.Web/Program.cs" />
-      <option value="$PROJECT_DIR$/BookShop.Web/Startup.cs" />
-      <option value="$PROJECT_DIR$/BookShop.Web/Services/BookService.cs" />
-      <option value="$PROJECT_DIR$/BookShop.Web/Services/ShopService.cs" />
-      <option value="$PROJECT_DIR$/BookShop.Web/Controllers/BookController.cs" />
       <option value="$PROJECT_DIR$/BookShopSecond/Program.cs" />
       <option value="$PROJECT_DIR$/BookShop.Web/ContractLibrary/IBookContract.cs" />
+      <option value="$PROJECT_DIR$/BookShop.Web/Startup.cs" />
+      <option value="$PROJECT_DIR$/BookShop.Web/Jobs/CheckOrderNeedJob.cs" />
+      <option value="$PROJECT_DIR$/BookShop.Web/Controllers/ShopController.cs" />
+      <option value="$PROJECT_DIR$/BookShop.Web/Controllers/BookController.cs" />
+      <option value="$PROJECT_DIR$/BookShop.Web/Services/BookService.cs" />
+      <option value="$PROJECT_DIR$/BookShop.Web/Services/ShopService.cs" />
+      <option value="$PROJECT_DIR$/BookShopSecond/Book.cs" />
+      <option value="$PROJECT_DIR$/BookShopSecond/Shop.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1n1BGEcdKnEr0RdjrhK28fmrINW" />
@@ -140,6 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610547618305</updated>
       <workItem from="1610547628253" duration="1042000" />
+      <workItem from="1610623763941" duration="470000" />
     </task>
     <servers />
   </component>
@@ -156,6 +131,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

@@ -25,8 +25,6 @@ namespace BookShop.Web.Services
         public void InitShop()
         {
             var bsContext = _dbContextFactory.GetContext();
-            #warning чем сравнивать с 0 лучше использовать .Any() (проверяет что в коллекции есть хотя бы что-то)
-            #warning исправил
             if (!bsContext.ShopAny())
             {
                 var shop = new Shop
@@ -39,8 +37,6 @@ namespace BookShop.Web.Services
 
         }
 
-        #warning delivery
-        #warning исправил
         public Book CreateBook(String name, String genre, decimal price, bool isNew, DateTime dateOfDelivery)
         {
             var book = new Book()
@@ -70,6 +66,7 @@ namespace BookShop.Web.Services
 
         #warning неиспользуемый метод
         #warning используется в контроллере для получения одной книги
+        #warning нет, не используется) 
         public Book GetBook(Guid id)
         {
             var book = _dbContextFactory.GetContext().GetBook(id);
@@ -111,8 +108,6 @@ namespace BookShop.Web.Services
         }
         public async Task SellBookAsync(Guid id)
         {
-            #warning с нижнего подчёркивания обычно начинаются приватные переменные класса,локальные переменные пишутся без него
-            #warning исправил
             var bsContext = _dbContextFactory.GetContext();
             var book = await bsContext.GetBook(id);
             var shop = await bsContext.GetShop(1);
@@ -124,6 +119,7 @@ namespace BookShop.Web.Services
                 await bsContext.DeleteBook(book);
                 await trans.CommitAsync();
             }
+            #warning ох, очень плохой код. у тебя будет отловлен абсолютно любой exception, а ты, во-первых, не узнаешь какой, а во-вторых - ничего не сделаешь
             catch (Exception)
             {
 
@@ -131,6 +127,7 @@ namespace BookShop.Web.Services
 
         }
 
+        #warning в названиях методов обычно опускают слово async. что метод асинхронный сигнализирует возвращаемый тип - Task, Task<T>
         public async Task AddBookAsync(Book book)
         {
             var bsContext = _dbContextFactory.GetContext();
@@ -149,12 +146,11 @@ namespace BookShop.Web.Services
 
         public async Task<bool> NeedBooksAsync()
         {
+            #warning слишком жёстко. ну _dbContextFactory.GetContext() уж точно можно было вынести в переменную
             if(await _dbContextFactory.GetContext().BooksCount() < MinBookPercent * _dbContextFactory.GetContext().GetShop(1).Result.MaxBookQuantity)
             {
                 return true;
             }
-            #warning тут можно не писать else
-            #warning исправил
             return false;
         }
     }
