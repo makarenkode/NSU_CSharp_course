@@ -19,30 +19,30 @@ namespace BookShop.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Book>> GetBooksAsync()
+        public async Task<List<Book>> GetBooks()
         {
-           return await _bookService.GetBooksAsync();
+           return await _bookService.GetBooks();
         }
 
         [HttpGet, Route("sell/{id}")]
-        public async Task<List<Book>> SellBookAsync(Guid id)
+        public async Task<List<Book>> SellBook(Guid id)
         {
-            await _bookService.SellBookAsync(id);
-            return await GetBooksAsync();
+            await _bookService.SellBook(id);
+            return await GetBooks();
 
         }
 
         [HttpGet, Route("sell/all")]
-        public async Task<List<Book>> SellAllAsync()
+        public async Task<List<Book>> SellAll()
         {
-            await _bookService.SellAllBookAsync();
-            return await GetBooksAsync();
+            await _bookService.SellAllBook();
+            return await GetBooks();
         }
         [HttpGet, Route("discount/{genre}&{discount}")]
-        public async Task<List<Book>> MakeDiscountAsync(string genre, decimal discount)
+        public async Task<List<Book>> MakeDiscount(string genre, decimal discount)
         {
-            await _bookService.MakeDiscountAsync(genre, discount);
-            return await GetBooksAsync();
+            await _bookService.MakeDiscount(genre, discount);
+            return await GetBooks();
         }
     }
 }

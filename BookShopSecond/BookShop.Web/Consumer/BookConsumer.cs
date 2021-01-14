@@ -19,7 +19,7 @@ namespace BookShop.Web.Consumer
             var message = context.Message;
             foreach(var book in message.JBooks)
             {
-                await _bookService.AddBookAsync(_bookService.JsonToBook(book));
+                await _bookService.AddBook(_bookService.JsonToBook(book));
             }
 
             Console.WriteLine($" Books: {message.JBooks}");

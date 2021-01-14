@@ -49,7 +49,7 @@ namespace BookShopSecond.Data.Migrations
 
             modelBuilder.Entity("BookShopSecond.Data.Shop", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();

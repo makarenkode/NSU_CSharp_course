@@ -39,11 +39,11 @@ namespace BookShop.Test
             var maxBookQuantity = 100;
             var shop = new Shop
             {
-                id = 1,
+                Id = 1,
                 Balance = balance,
                 MaxBookQuantity = maxBookQuantity
             };
-            shop.id.Should().Be(1);
+            shop.Id.Should().Be(1);
             shop.Balance.Should().Be(balance);
             shop.MaxBookQuantity.Should().Be(maxBookQuantity);
         }

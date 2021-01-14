@@ -19,7 +19,7 @@ namespace BookShop.Web.Jobs
         }
         public async Task Execute(IJobExecutionContext context)
         {
-            if (await _bookService.NeedBooksAsync())
+            if (await _bookService.NeedBooks())
             {
               await  _needBookProducer.SentBookReceivedEvent(10);
             }

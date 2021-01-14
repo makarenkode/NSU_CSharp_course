@@ -64,20 +64,13 @@ namespace BookShop.Web.Services
             return book;
         }
 
-        #warning неиспользуемый метод
-        #warning используется в контроллере для получения одной книги
-        #warning нет, не используется) 
-        public Book GetBook(Guid id)
-        {
-            var book = _dbContextFactory.GetContext().GetBook(id);
-            if(book == null)
-            {
-                throw new NullReferenceException();
-            }
-            return book.Result;
-        }
+#warning неиспользуемый метод
+#warning используется в контроллере для получения одной книги
+#warning нет, не используется) 
+#warning да не используется, убрал)
 
-        public virtual async Task<List<Book>> GetBooksAsync()
+
+        public virtual async Task<List<Book>> GetBooks()
         {
             var list = new List<Book>();
             foreach(var book in await _dbContextFactory.GetContext().GetBooks())
@@ -87,7 +80,7 @@ namespace BookShop.Web.Services
             return list;
         }
 
-        public async Task MakeDiscountAsync(string genre, decimal discount)
+        public async Task MakeDiscount(string genre, decimal discount)
         {
             var bsContext = _dbContextFactory.GetContext();
             foreach (var book in await bsContext.GetBooks())
@@ -99,14 +92,14 @@ namespace BookShop.Web.Services
                 }
             }
         }
-        public async Task SellAllBookAsync()
+        public async Task SellAllBook()
         {
             foreach(var b in await _dbContextFactory.GetContext().GetBooks())
             {
-                await SellBookAsync(b.Id);
+                await SellBook(b.Id);
             }
         }
-        public async Task SellBookAsync(Guid id)
+        public async Task SellBook(Guid id)
         {
             var bsContext = _dbContextFactory.GetContext();
             var book = await bsContext.GetBook(id);
@@ -119,16 +112,18 @@ namespace BookShop.Web.Services
                 await bsContext.DeleteBook(book);
                 await trans.CommitAsync();
             }
-            #warning ох, очень плохой код. у тебя будет отловлен абсолютно любой exception, а ты, во-первых, не узнаешь какой, а во-вторых - ничего не сделаешь
-            catch (Exception)
+#warning ох, очень плохой код. у тебя будет отловлен абсолютно любой exception, а ты, во-первых, не узнаешь какой, а во-вторых - ничего не сделаешь
+#warning исправил
+            catch (Exception ex)
             {
-
+                Console.WriteLine("Error in SellBook:" + ex.Message);
+                trans.Rollback();
             }
 
         }
 
         #warning в названиях методов обычно опускают слово async. что метод асинхронный сигнализирует возвращаемый тип - Task, Task<T>
-        public async Task AddBookAsync(Book book)
+        public async Task AddBook(Book book)
         {
             var bsContext = _dbContextFactory.GetContext();
             var shop = await _dbContextFactory.GetContext().GetShop(1);
@@ -144,10 +139,14 @@ namespace BookShop.Web.Services
             }
         }
 
-        public async Task<bool> NeedBooksAsync()
+        public async Task<bool> NeedBooks()
         {
-            #warning слишком жёстко. ну _dbContextFactory.GetContext() уж точно можно было вынести в переменную
-            if(await _dbContextFactory.GetContext().BooksCount() < MinBookPercent * _dbContextFactory.GetContext().GetShop(1).Result.MaxBookQuantity)
+#warning слишком жёстко. ну _dbContextFactory.GetContext() уж точно можно было вынести в переменную
+#warning исправил
+            var context = _dbContextFactory.GetContext();
+            var shop = await _dbContextFactory.GetContext().GetShop(1);
+            var bookQuantity = await context.BooksCount();
+            if (bookQuantity < MinBookPercent * shop.MaxBookQuantity)
             {
                 return true;
             }

@@ -17,15 +17,9 @@ namespace BookShop.Web.Services
             var shop = _dbContextFactory.GetContext().GetShop(1);
             return shop.Result;
         }
-        #warning неиспользуемый метод
-        #warning используется в BookService при продаже книги(метод SellBook)
-        #warning  http://prntscr.com/wnce9o
-        public async Task AddMoneyAsync (decimal money)
-        {
-            var bsContext = _dbContextFactory.GetContext();
-            var shop = bsContext.GetShop(1);
-            shop.Result.Balance += money;
-            await bsContext.UpdateShop(shop.Result);
-        }
+#warning неиспользуемый метод
+#warning используется в BookService при продаже книги(метод SellBook)
+#warning  http://prntscr.com/wnce9o
+#warning да, убрал не нужный метод)
     }
 }

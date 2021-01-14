@@ -8,8 +8,8 @@ namespace BookShopSecond.Data.Configurations
 		public void Configure(EntityTypeBuilder<Shop> builder)
 		{
 			builder.ToTable(nameof(Shop), BSContext.DefaultSchemaName);
-			builder.HasKey(x => x.id);
-			builder.Property(x => x.id).ValueGeneratedOnAdd();
+			builder.HasKey(x => x.Id);
+			builder.Property(x => x.Id).ValueGeneratedOnAdd();
 			builder.Property(x => x.Balance).IsRequired();
 			builder.HasCheckConstraint("CK_BookShop.Balance", "[Balance] > 0");
 			builder.Property(x => x.MaxBookQuantity).IsRequired();

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace BookShopSecond.Data
@@ -44,7 +45,7 @@ namespace BookShopSecond.Data
         }
         public async Task<Shop> GetShop(int id)
         {
-            return await Set<Shop>().FirstOrDefaultAsync(b => b.id == id);
+            return await Set<Shop>().FirstOrDefaultAsync(b => b.Id == id);
         }
 
         public bool ShopAny()
@@ -98,8 +99,7 @@ namespace BookShopSecond.Data
                 await DeleteBook(book);
             }
         }
-        //public DbSet<Book> Books { get; set; }
-        //public DbSet<Shop> Shops { get; set; }
+
 
     }
 }
