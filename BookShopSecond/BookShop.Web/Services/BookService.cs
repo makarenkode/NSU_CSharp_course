@@ -25,8 +25,8 @@ namespace BookShop.Web.Services
         public void InitShop()
         {
             var bsContext = _dbContextFactory.GetContext();
-            //#warning чем сравнивать с 0 лучше использовать .Any() (проверяет что в коллекции есть хотя бы что-то)
-            //#warning исправил
+            #warning чем сравнивать с 0 лучше использовать .Any() (проверяет что в коллекции есть хотя бы что-то)
+            #warning исправил
             if (!bsContext.ShopAny())
             {
                 var shop = new Shop
@@ -39,8 +39,8 @@ namespace BookShop.Web.Services
 
         }
 
-        //#warning delivery
-        //#warning исправил
+        #warning delivery
+        #warning исправил
         public Book CreateBook(String name, String genre, decimal price, bool isNew, DateTime dateOfDelivery)
         {
             var book = new Book()
@@ -68,8 +68,8 @@ namespace BookShop.Web.Services
             return book;
         }
 
-        //#warning неиспользуемый метод
-        //#warning используется в контроллере для получения одной книги
+        #warning неиспользуемый метод
+        #warning используется в контроллере для получения одной книги
         public Book GetBook(Guid id)
         {
             var book = _dbContextFactory.GetContext().GetBook(id);
@@ -111,8 +111,8 @@ namespace BookShop.Web.Services
         }
         public async Task SellBookAsync(Guid id)
         {
-            //#warning с нижнего подчёркивания обычно начинаются приватные переменные класса,локальные переменные пишутся без него
-            //#warning исправил
+            #warning с нижнего подчёркивания обычно начинаются приватные переменные класса,локальные переменные пишутся без него
+            #warning исправил
             var bsContext = _dbContextFactory.GetContext();
             var book = await bsContext.GetBook(id);
             var shop = await bsContext.GetShop(1);
@@ -153,8 +153,8 @@ namespace BookShop.Web.Services
             {
                 return true;
             }
-            //#warning тут можно не писать else
-            //#warning исправил
+            #warning тут можно не писать else
+            #warning исправил
             return false;
         }
     }

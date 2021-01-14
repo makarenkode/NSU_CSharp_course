@@ -30,11 +30,11 @@ namespace BookShop.Web
             services.AddControllers();
             services.AddSingleton<BSContext>();
             services.AddSingleton<ShopService>();
-            //#warning почему у тебя нет connection string'a в appsettings.json? у тебя вот тут в конструктор BookShopContextDbContextFactory передаётся ничего, такой код не может работать
-            //#warning исправил
+            #warning почему у тебя нет connection string'a в appsettings.json? у тебя вот тут в конструктор BookShopContextDbContextFactory передаётся ничего, такой код не может работать
+            #warning исправил
             services.AddSingleton(isp => new BookShopContextDbContextFactory(Configuration.GetConnectionString("DefaultConnection")));
-            //#warning тут можно просто написать services.AddSingleton<BookService>(), BookShopContextDbContextFactory сама заинжектится потом в него
-            //#warning исправил
+            #warning тут можно просто написать services.AddSingleton<BookService>(), BookShopContextDbContextFactory сама заинжектится потом в него
+            #warning исправил
             services.AddSingleton<BookService>();
             
             

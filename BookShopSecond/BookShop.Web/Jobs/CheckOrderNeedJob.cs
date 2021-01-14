@@ -12,7 +12,7 @@ namespace BookShop.Web.Jobs
     {
         private readonly BookService _bookService;
         private readonly NeedBookProducer _needBookProducer;
-        //#warning по такому названию непонятно что делает Job 
+        #warning по такому названию непонятно что делает Job 
         public CheckOrderNeedJob(BookService bookService, NeedBookProducer needBookProducer)
         {
             _bookService = bookService;
@@ -20,8 +20,8 @@ namespace BookShop.Web.Jobs
         }
         public async Task Execute(IJobExecutionContext context)
         {
-            //#warning сравнение с true можно опустить
-            //#warning исправил
+            #warning сравнение с true можно опустить
+            #warning исправил
             if (await _bookService.NeedBooksAsync())
             {
               await  _needBookProducer.SentBookReceivedEvent(10);

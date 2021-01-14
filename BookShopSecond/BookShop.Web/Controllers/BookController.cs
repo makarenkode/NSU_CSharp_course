@@ -24,8 +24,8 @@ namespace BookShop.Web.Controllers
            return await _bookService.GetBooksAsync();
         }
 
-        //#warning почему имя параметра - count? 
-        //#warning исправил
+        #warning почему имя параметра - count? 
+        #warning исправил
         [HttpGet, Route("sell/{id}")]
         public async Task<List<Book>> SellBookAsync(Guid id)
         {
