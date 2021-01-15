@@ -365,3 +365,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+BookProvider/.idea/.idea.BookProvider/.idea/contentModel.xml
+BookProvider/.idea/.idea.BookProvider/.idea/indexLayout.xml
+BookProvider/.idea/

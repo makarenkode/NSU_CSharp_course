@@ -26,12 +26,7 @@ namespace BookProvider.Services
             var httpRequest = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-#warning на мой субъективный взгляд, лучше использовать интерполяцию строк 
-#warning $"{_endPoint}{count.ToString()}";
-#warning ready
                 RequestUri = new Uri($"{_endPoint}{count.ToString()}"),
-
-               
             };
             var response = await _httpClient.SendAsync(httpRequest);
             var json = await response.Content.ReadAsStringAsync();

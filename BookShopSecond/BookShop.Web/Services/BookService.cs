@@ -36,6 +36,7 @@ namespace BookShop.Web.Services
 
         }
 
+        #warning ррррр
         public Book CreateBook(String name, String genre, decimal price, bool isNew, DateTime dateOfDelivery)
         {
             var book = new Book()
@@ -62,12 +63,6 @@ namespace BookShop.Web.Services
             };
             return book;
         }
-
-#warning неиспользуемый метод
-#warning используется в контроллере для получения одной книги
-#warning нет, не используется) 
-#warning да не используется, убрал)
-
 
         public virtual async Task<List<Book>> GetBooks()
         {
@@ -111,8 +106,6 @@ namespace BookShop.Web.Services
                 await bsContext.DeleteBook(book);
                 await trans.CommitAsync();
             }
-#warning ох, очень плохой код. у тебя будет отловлен абсолютно любой exception, а ты, во-первых, не узнаешь какой, а во-вторых - ничего не сделаешь
-#warning исправил
             catch (Exception ex)
             {
                 Console.WriteLine("Error in SellBook:" + ex.Message);

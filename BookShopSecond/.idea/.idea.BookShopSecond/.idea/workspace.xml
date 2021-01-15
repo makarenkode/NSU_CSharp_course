@@ -7,11 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a06d2be1-6bba-4ee5-8e4f-b6d832d1f062" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../BookProvider/BookProvider/Consumer/BookConsumer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BookProvider/BookProvider/Consumer/BookConsumer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BookProvider/BookProvider/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BookProvider/BookProvider/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BookProvider/BookProvider/Services/ApiService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BookProvider/BookProvider/Services/ApiService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BookShopSecond/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BookShopSecond/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookShop.Web/Consumer/BookConsumer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Consumer/BookConsumer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookShop.Web/Services/BookService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Services/BookService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookShop.Web/Services/ShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Services/ShopService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,17 +29,19 @@
       <option value="$PROJECT_DIR$/BookShop.Web/ContractLibrary/IBookContract.cs" />
       <option value="$PROJECT_DIR$/BookShop.Web/Startup.cs" />
       <option value="$PROJECT_DIR$/BookShop.Web/Jobs/CheckOrderNeedJob.cs" />
-      <option value="$PROJECT_DIR$/BookShop.Web/Controllers/ShopController.cs" />
       <option value="$PROJECT_DIR$/BookShop.Web/Controllers/BookController.cs" />
-      <option value="$PROJECT_DIR$/BookShop.Web/Services/ShopService.cs" />
       <option value="$PROJECT_DIR$/BookShopSecond/Book.cs" />
       <option value="$PROJECT_DIR$/BookShopSecond/Shop.cs" />
-      <option value="$PROJECT_DIR$/BookShop.Web/Services/BookService.cs" />
       <option value="$PROJECT_DIR$/BookShop.Web/Consumer/BookConsumer.cs" />
+      <option value="$PROJECT_DIR$/BookShop.Web/Controllers/ShopController.cs" />
+      <option value="$PROJECT_DIR$/BookShop.Web/Services/BookService.cs" />
+      <option value="$PROJECT_DIR$/BookShop.Web/Services/ShopService.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1n1BGEcdKnEr0RdjrhK28fmrINW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
