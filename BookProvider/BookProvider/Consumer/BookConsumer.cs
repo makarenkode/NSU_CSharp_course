@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
 using ContractLibrary;
-using ExternalApi.Producer;
+using BookProvider.Producer;
 using MassTransit;
 
-namespace ExternalApi.Consumer
+namespace BookProvider.Consumer
 {
     public class BookConsumer : IConsumer<IBookContract>
     {
@@ -18,8 +18,8 @@ namespace ExternalApi.Consumer
             var message = context.Message;
             await _bookProducer.SentBookReceivedEvent(message.BookQuantity);
             Console.WriteLine($"Payment from {message.BookQuantity} ");
-            #warning ненужный return 
-            return;
+#warning ненужный return 
+#warning ready
         }
     }
 }

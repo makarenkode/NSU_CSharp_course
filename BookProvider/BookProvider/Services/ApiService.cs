@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace ExternalApi.Services
+namespace BookProvider.Services
 {
     public class ApiService
     {
@@ -26,9 +26,11 @@ namespace ExternalApi.Services
             var httpRequest = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                #warning на мой субъективный взгляд, лучше использовать интерполяцию строк 
-                #warning $"{_endPoint}{count.ToString()}";
-                RequestUri = new Uri(_endPoint + count.ToString()),
+#warning на мой субъективный взгляд, лучше использовать интерполяцию строк 
+#warning $"{_endPoint}{count.ToString()}";
+#warning ready
+                RequestUri = new Uri($"{_endPoint}{count.ToString()}"),
+
                
             };
             var response = await _httpClient.SendAsync(httpRequest);

@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using ExternalApi.Services;
+using BookProvider.Services;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
 
-namespace ExternalApi.Producer
+namespace BookProvider.Producer
 {
     public class BookProducer
     {

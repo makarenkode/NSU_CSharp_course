@@ -19,12 +19,21 @@ namespace BookShop.Web.Consumer
             var message = context.Message;
             foreach(var book in message.JBooks)
             {
-                #warning теоретически, при такой реализации какая-то одна книга может не сохраниться, и всё сообщение упадёт в очередь ошибок
-                #warning что не позволит в дальнейшем снова закинуть его для обработки в первоначальном виде
-                #warning т.к. часть уже будет добавлена. 
-                #warning можно обернуть вызов AddBook в try/catch, в случае какого-то exception'a логировать, что произошло и какая книга не добавилась
-                #warning тогда это можно будет по логам найти и досохранить несохранённое
-                await _bookService.AddBook(_bookService.JsonToBook(book));
+#warning теоретически, при такой реализации какая-то одна книга может не сохраниться, и всё сообщение упадёт в очередь ошибок
+#warning что не позволит в дальнейшем снова закинуть его для обработки в первоначальном виде
+#warning т.к. часть уже будет добавлена. 
+#warning можно обернуть вызов AddBook в try/catch, в случае какого-то exception'a логировать, что произошло и какая книга не добавилась
+#warning тогда это можно будет по логам найти и досохранить несохранённое
+#warning ready, очень крутой совет!
+                try
+                {
+                    await _bookService.AddBook(_bookService.JsonToBook(book));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+               
             }
 
             Console.WriteLine($" Books: {message.JBooks}");

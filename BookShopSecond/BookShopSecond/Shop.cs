@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace BookShopSecond.Data
+﻿namespace BookShopSecond.Data
 {
     public class Shop
     {

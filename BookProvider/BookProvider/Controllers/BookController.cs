@@ -1,10 +1,10 @@
 ﻿using ContractLibrary.JsonModels;
-using ExternalApi.Services;
+using BookProvider.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ExternalApi.Controllers
+namespace BookProvider.Controllers
 {
     [Route("api/books")]
     [ApiController]

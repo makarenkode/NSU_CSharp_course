@@ -1,23 +1,19 @@
-using ExternalApi.Consumer;
-using ExternalApi.Producer;
-using ExternalApi.Services;
+using BookProvider.Consumer;
+using BookProvider.Producer;
+using BookProvider.Services;
 using MassTransit;
 using MassTransit.AspNetCoreIntegration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
 
-namespace ExternalApi
+
+namespace BookProvider
 {
     public class Startup
     {

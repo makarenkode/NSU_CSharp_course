@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExternalApi.Producer
+namespace BookProvider.Producer
 {
     public class MassTransitConfiguration
     {

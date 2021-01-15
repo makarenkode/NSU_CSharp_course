@@ -2,7 +2,7 @@
 using ContractLibrary.JsonModels;
 using System.Collections.Generic;
 
-namespace ExternalApi.Producer
+namespace BookProvider.Producer
 {
     public class BookContract : IBookListContract
     {

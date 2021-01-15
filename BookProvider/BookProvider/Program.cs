@@ -1,15 +1,11 @@
 using Microsoft.AspNetCore.Hosting;
 #warning неиспользуемые using'и, проверь везде
-using Microsoft.Extensions.Configuration;
+#warning ready
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 #warning namespace не соответствует реальному, проверь везде
-namespace ExternalApi
+#warning ready
+namespace BookProvider
 {
     public class Program
     {

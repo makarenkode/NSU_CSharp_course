@@ -1,5 +1,4 @@
 ﻿using BookShopSecond.Data;
-using System.Threading.Tasks;
 
 namespace BookShop.Web.Services
 {
