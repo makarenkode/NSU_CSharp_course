@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BookShopSecond.Data
 {
-    public class BSContext : DbContext
+    public sealed class BSContext : DbContext
     {
         public const string DefaultSchemaName = "BookShop";
         private const string DefaultConnectionString = "Server=localhost\\SQLEXPRESS;Database=BookShop;Trusted_Connection=True;";
@@ -49,11 +49,7 @@ namespace BookShopSecond.Data
 
         public bool ShopAny()
         {
-           if (Set<Shop>().Local.Count != 0)
-            {
-                return true;
-            }
-            return false;
+            return Set<Shop>().Local.Count != 0;
         }
 
 
@@ -91,7 +87,7 @@ namespace BookShopSecond.Data
 
         public async Task DeleteBook(Guid id)
         {
-            Book book = await Set<Book>()
+            var book = await Set<Book>()
                 .FirstOrDefaultAsync(b => b.Id == id);
             if (book != null)
             {

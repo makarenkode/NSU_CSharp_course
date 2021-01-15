@@ -1,4 +1,5 @@
-﻿using BookShopSecond.Data;
+﻿using System.Threading.Tasks;
+using BookShopSecond.Data;
 
 namespace BookShop.Web.Services
 {
@@ -11,10 +12,10 @@ namespace BookShop.Web.Services
             _dbContextFactory = dbContextFactory;
         }
 
-        public Shop GetShop()
+        public async Task<Shop> GetShop()
         {
-            var shop = _dbContextFactory.GetContext().GetShop(1);
-            return shop.Result;
+            return  await _dbContextFactory.GetContext().GetShop(1);
+            
         }
     }
 }

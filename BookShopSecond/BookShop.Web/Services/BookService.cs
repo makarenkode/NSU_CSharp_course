@@ -9,47 +9,29 @@ namespace BookShop.Web.Services
     public class BookService
     {
         private readonly BookShopContextDbContextFactory _dbContextFactory;
-        private double MinBookPercent = 0.1;
+        public const double MinBookPercent = 0.1;
 
         public BookService(BookShopContextDbContextFactory dbContextFactory)
         {
             _dbContextFactory = dbContextFactory;
             InitShop();
         }
-        public BookService()
-        {
-
-        }
 
         public void InitShop()
         {
             var bsContext = _dbContextFactory.GetContext();
-            if (!bsContext.ShopAny())
+            if (bsContext.ShopAny()) return;
+            var shop = new Shop
             {
-                var shop = new Shop
-                {
-                    Balance = 1000,
-                    MaxBookQuantity = 100
-                };
-                 bsContext.AddShop(shop);
-            }
-
-        }
-
-        #warning ррррр
-        public Book CreateBook(String name, String genre, decimal price, bool isNew, DateTime dateOfDelivery)
-        {
-            var book = new Book()
-            {
-                Id = Guid.NewGuid(),
-                Title = name,
-                Genre = genre,
-                Price = price,
-                IsNew = isNew,
-                DateOfDelivery = dateOfDelivery
+                Balance = 1000,
+                MaxBookQuantity = 100
             };
-            return book;
+            bsContext.AddShop(shop);
+
         }
+
+#warning ррррр
+#warning убрал неиспользуемый код
         public Book JsonToBook(JsonBook jsonBook)
         {
             var book = new Book
@@ -109,7 +91,7 @@ namespace BookShop.Web.Services
             catch (Exception ex)
             {
                 Console.WriteLine("Error in SellBook:" + ex.Message);
-                trans.Rollback();
+                await trans.RollbackAsync();
             }
 
         }
@@ -135,11 +117,7 @@ namespace BookShop.Web.Services
             var context = _dbContextFactory.GetContext();
             var shop = await _dbContextFactory.GetContext().GetShop(1);
             var bookQuantity = await context.BooksCount();
-            if (bookQuantity < MinBookPercent * shop.MaxBookQuantity)
-            {
-                return true;
-            }
-            return false;
+            return bookQuantity < MinBookPercent * shop.MaxBookQuantity;
         }
     }
 }

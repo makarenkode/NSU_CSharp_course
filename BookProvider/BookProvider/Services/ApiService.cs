@@ -2,8 +2,6 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-//#warning неиспользуемые using'и. Проверь во всем коде и убери
-//#warning убрал не нужный using
 using System.Net.Http;
 using System.Threading.Tasks;
 

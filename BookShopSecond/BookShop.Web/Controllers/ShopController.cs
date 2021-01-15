@@ -1,4 +1,5 @@
-﻿using BookShop.Web.Services;
+﻿using System.Threading.Tasks;
+using BookShop.Web.Services;
 using BookShopSecond.Data;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,7 +7,7 @@ namespace BookShop.Web.Controllers
 {
     [Route("shop")]
     [ApiController]
-    public class ShopController
+    public class ShopController : ControllerBase
     {
         private readonly ShopService _shopService;
 
@@ -16,9 +17,9 @@ namespace BookShop.Web.Controllers
         }
         
         [HttpGet]
-        public Shop GetShop()
+        public async Task<Shop> GetShop()
         {
-           return  _shopService.GetShop();
+           return await  _shopService.GetShop();
         }
     }
 }

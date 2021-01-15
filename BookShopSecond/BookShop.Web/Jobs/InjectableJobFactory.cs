@@ -23,7 +23,7 @@ namespace BookShop.Web.Jobs
             }
             catch (Exception e)
             {
-                throw new SchedulerException($"Problem while instantiating job '{bundle.JobDetail.Key}' from the NinjectJobFactory.", e);
+                throw new SchedulerException($"Problem while instantiating job '{bundle.JobDetail.Key}' from the injectJobFactory.", e);
             }
         }
     }

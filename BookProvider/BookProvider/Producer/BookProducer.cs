@@ -18,11 +18,11 @@ namespace BookProvider.Producer
             _apiService = apiService;
         }
 
-        public async Task SentBookReceivedEvent(int BookQuantity)
+        public async Task SentBookReceivedEvent(int bookQuantity)
         {
             var message = new BookContract
             {
-                JBooks = await _apiService.GetBooks(BookQuantity)
+                JBooks = await _apiService.GetBooks(bookQuantity)
             };
 
             var hostConfig = new MassTransitConfiguration();
