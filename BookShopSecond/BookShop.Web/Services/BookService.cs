@@ -122,7 +122,6 @@ namespace BookShop.Web.Services
 
         }
 
-        #warning в названиях методов обычно опускают слово async. что метод асинхронный сигнализирует возвращаемый тип - Task, Task<T>
         public async Task AddBook(Book book)
         {
             var bsContext = _dbContextFactory.GetContext();
@@ -141,8 +140,6 @@ namespace BookShop.Web.Services
 
         public async Task<bool> NeedBooks()
         {
-#warning слишком жёстко. ну _dbContextFactory.GetContext() уж точно можно было вынести в переменную
-#warning исправил
             var context = _dbContextFactory.GetContext();
             var shop = await _dbContextFactory.GetContext().GetShop(1);
             var bookQuantity = await context.BooksCount();

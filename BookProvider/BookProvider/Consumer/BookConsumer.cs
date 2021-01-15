@@ -18,6 +18,7 @@ namespace ExternalApi.Consumer
             var message = context.Message;
             await _bookProducer.SentBookReceivedEvent(message.BookQuantity);
             Console.WriteLine($"Payment from {message.BookQuantity} ");
+            #warning ненужный return 
             return;
         }
     }

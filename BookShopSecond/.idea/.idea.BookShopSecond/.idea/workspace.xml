@@ -6,15 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a06d2be1-6bba-4ee5-8e4f-b6d832d1f062" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BookShopSecond/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BookShopSecond/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookProvider/BookProvider/Consumer/BookConsumer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BookProvider/BookProvider/Consumer/BookConsumer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookProvider/BookProvider/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BookProvider/BookProvider/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookProvider/BookProvider/Services/ApiService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BookProvider/BookProvider/Services/ApiService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BookShopSecond/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BookShopSecond/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/Controllers/BookController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Controllers/BookController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/Jobs/CheckOrderNeedJob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Jobs/CheckOrderNeedJob.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookShop.Web/Consumer/BookConsumer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Consumer/BookConsumer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookShop.Web/Services/BookService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Services/BookService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/Services/ShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Services/ShopService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.Web/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.Web/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShopSecond/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShopSecond/Book.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShopSecond/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookShopSecond/Shop.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +31,11 @@
       <option value="$PROJECT_DIR$/BookShop.Web/Jobs/CheckOrderNeedJob.cs" />
       <option value="$PROJECT_DIR$/BookShop.Web/Controllers/ShopController.cs" />
       <option value="$PROJECT_DIR$/BookShop.Web/Controllers/BookController.cs" />
-      <option value="$PROJECT_DIR$/BookShop.Web/Services/BookService.cs" />
       <option value="$PROJECT_DIR$/BookShop.Web/Services/ShopService.cs" />
       <option value="$PROJECT_DIR$/BookShopSecond/Book.cs" />
       <option value="$PROJECT_DIR$/BookShopSecond/Shop.cs" />
+      <option value="$PROJECT_DIR$/BookShop.Web/Services/BookService.cs" />
+      <option value="$PROJECT_DIR$/BookShop.Web/Consumer/BookConsumer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1n1BGEcdKnEr0RdjrhK28fmrINW" />
@@ -114,7 +112,8 @@
       <option name="presentableId" value="Default" />
       <updated>1610547618305</updated>
       <workItem from="1610547628253" duration="1042000" />
-      <workItem from="1610623763941" duration="470000" />
+      <workItem from="1610623763941" duration="1070000" />
+      <workItem from="1610677152188" duration="254000" />
     </task>
     <servers />
   </component>

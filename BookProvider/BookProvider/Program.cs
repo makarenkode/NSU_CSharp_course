@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
+#warning неиспользуемые using'и, проверь везде
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -7,8 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-//#warning название solution'a и проекта очень плохо соответствуют действительности
-//#warning папки bin и obj => gitignore
+#warning namespace не соответствует реальному, проверь везде
 namespace ExternalApi
 {
     public class Program
