@@ -8,7 +8,7 @@ namespace BookShopSecond.Data
     public sealed class BSContext : DbContext
     {
         public const string DefaultSchemaName = "BookShop";
-        private const string DefaultConnectionString = "Server=localhost\\SQLEXPRESS;Database=BookShop;Trusted_Connection=True;";
+        private const string DefaultConnectionString = "Server=mybookshopserver.database.windows.net;Database=BookShop; User Id=d.makarenko; Password=Danil19081999;";
         public BSContext(DbContextOptions options) : base(options) 
         {
             Database.EnsureCreated();
@@ -41,6 +41,29 @@ namespace BookShopSecond.Data
         public async Task<Book> GetBook(Guid id)
         {
             return await Set<Book>().FirstOrDefaultAsync(b => b.Id == id);
+        }
+        public async Task<Book> GetBook(string genre)
+        {
+            return await Set<Book>().FirstOrDefaultAsync(b => b.Genre == genre);
+        }
+        public async Task<Book> GetBook()
+        {
+            var rand = new Random();
+            var quantity = await BooksCount();
+            var index = rand.Next(quantity);
+            var books = await GetBooks();
+            var counter = 0;
+            foreach (var book in books)
+            {
+                counter++;
+                if (counter == index)
+                {
+                    return book;
+                }
+
+            }
+
+            return await Set<Book>().FirstOrDefaultAsync();
         }
         public async Task<Shop> GetShop(int id)
         {
@@ -84,17 +107,5 @@ namespace BookShopSecond.Data
             Set<Book>().Remove(book);
             await SaveChangesAsync();
         }
-
-        public async Task DeleteBook(Guid id)
-        {
-            var book = await Set<Book>()
-                .FirstOrDefaultAsync(b => b.Id == id);
-            if (book != null)
-            {
-                await DeleteBook(book);
-            }
-        }
-
-
     }
 }

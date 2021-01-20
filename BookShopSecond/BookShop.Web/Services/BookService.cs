@@ -56,6 +56,16 @@ namespace BookShop.Web.Services
             return list;
         }
 
+        public async Task<Guid> GetBookId(string genre)
+        {
+            var book = await _dbContextFactory.GetContext().GetBook(genre);
+            return book.Id;
+        }
+        public async Task<Guid> GetBookId()
+        {
+            var book = await _dbContextFactory.GetContext().GetBook();
+            return book.Id;
+        }
         public async Task MakeDiscount(string genre, decimal discount)
         {
             var bsContext = _dbContextFactory.GetContext();
@@ -75,7 +85,7 @@ namespace BookShop.Web.Services
                 await SellBook(b.Id);
             }
         }
-        public async Task SellBook(Guid id)
+        public async Task<Book> SellBook(Guid id)
         {
             var bsContext = _dbContextFactory.GetContext();
             var book = await bsContext.GetBook(id);
@@ -94,6 +104,7 @@ namespace BookShop.Web.Services
                 await trans.RollbackAsync();
             }
 
+            return book;
         }
 
         public async Task AddBook(Book book)

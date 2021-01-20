@@ -32,9 +32,6 @@ namespace BookShop.Web
             services.AddSingleton<ShopService>();
             services.AddSingleton(isp => new BookShopContextDbContextFactory(Configuration.GetConnectionString("DefaultConnection")));
             services.AddSingleton<BookService>();
-            
-            
-            
             services.AddSingleton<NeedBookProducer>();
             services.AddBackgroundJobs();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);

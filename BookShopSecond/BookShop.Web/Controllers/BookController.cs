@@ -24,12 +24,22 @@ namespace BookShop.Web.Controllers
            return await _bookService.GetBooks();
         }
 
-        [HttpGet, Route("sell/{id}")]
-        public async Task<List<Book>> SellBook(Guid id)
+        [HttpGet, Route("get/{genre}")]
+        public async Task<Guid> GetBookId(string genre)
         {
-            await _bookService.SellBook(id);
-            return await GetBooks();
+            return await _bookService.GetBookId(genre);
+        }
 
+        [HttpGet, Route("get")]
+        public async Task<Guid> GetBookId()
+        {
+            return await _bookService.GetBookId();
+        }
+
+        [HttpGet, Route("sell/{id}")]
+        public async Task<Book> SellBook(Guid id)
+        {
+          return await _bookService.SellBook(id);
         }
 
         [HttpGet, Route("sell/all")]
