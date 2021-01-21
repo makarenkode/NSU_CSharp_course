@@ -2,11 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>7200462a-62e0-4362-acc8-182c79f1d29e</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="2020.3.0" />
     <PackageReference Include="MassTransit.AspNetCore" Version="5.5.6" />
+    <PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="5.5.6" />
     <PackageReference Include="MassTransit.RabbitMQ" Version="5.5.6" />
     <PackageReference Include="Quartz" Version="3.2.3" />
   </ItemGroup>

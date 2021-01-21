@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Net.Http;
+using MassTransit.Azure.ServiceBus.Core;
+using Microsoft.Azure.ServiceBus.Primitives;
 
 
 namespace BookProvider
@@ -34,31 +36,30 @@ namespace BookProvider
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
             services.AddMassTransit(isp =>
-            {
-                var hostConfig = new MassTransitConfiguration();
-                Configuration.GetSection("MassTransit").Bind(hostConfig);
-
-                return Bus.Factory.CreateUsingRabbitMq(cfg =>
                 {
-                    var host = cfg.Host(
-                        new Uri(hostConfig.RabbitMqAddress),
-                        h =>
+
+                    var hostConfig = new MassTransitConfiguration();
+                    Configuration.GetSection("MassTransit").Bind(hostConfig);
+
+                    return Bus.Factory.CreateUsingAzureServiceBus(cfg =>
+                    {
+
+                        var host = cfg.Host(new Uri(hostConfig.Address), h =>
                         {
-                            h.Username(hostConfig.UserName);
-                            h.Password(hostConfig.Password);
+
+                            h.OperationTimeout = TimeSpan.FromSeconds(30);
+                            h.TokenProvider = TokenProvider.CreateSharedAccessSignatureTokenProvider(hostConfig.SharedAccessKeyName, hostConfig.SharedAccessKey);
                         });
 
-                    cfg.Durable = hostConfig.Durable;
-                    cfg.PurgeOnStartup = hostConfig.PurgeOnStartup;
 
-                    cfg.ReceiveEndpoint(host,
-                        "Request-queue", ep =>
-                        {
-                            ep.PrefetchCount = 1;
-                            ep.ConfigureConsumer<BookConsumer>(isp);
-                        });
-                });
-            },
+                        cfg.ReceiveEndpoint(host,
+                            "Request-queue", ep =>
+                            {
+                                ep.PrefetchCount = 1;
+                                ep.ConfigureConsumer<BookConsumer>(isp);
+                            });
+                    });
+                },
                 ispc =>
                 {
                     ispc.AddConsumers(typeof(BookConsumer).Assembly);

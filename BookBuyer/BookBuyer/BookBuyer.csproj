@@ -5,15 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MassTransit.AspNetCore" Version="5.5.6" />
-    <PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="5.5.6" />
-    <PackageReference Include="MassTransit.RabbitMQ" Version="5.5.6" />
+    <PackageReference Include="JetBrains.Annotations" Version="2020.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Quartz" Version="3.2.4" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="ContractLibrary">
-      <HintPath>..\..\ContractLibrary\ContractLibrary\obj\Debug\netcoreapp3.1\ContractLibrary.dll</HintPath>
+      <HintPath>..\..\..\..\C#\ContractLibrary\ContractLibrary\bin\Debug\netcoreapp3.1\ContractLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 

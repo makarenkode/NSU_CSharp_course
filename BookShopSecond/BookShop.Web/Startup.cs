@@ -12,6 +12,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using MassTransit.Azure.ServiceBus.Core;
+using MassTransit.Azure.ServiceBus.Core.Configurators;
+using Microsoft.Azure.ServiceBus.Primitives;
 
 namespace BookShop.Web
 {
@@ -38,21 +41,20 @@ namespace BookShop.Web
 
             services.AddMassTransit(isp =>
             {
+
                 var hostConfig = new MassTransitConfiguration();
                 Configuration.GetSection("MassTransit").Bind(hostConfig);
 
-                return Bus.Factory.CreateUsingRabbitMq(cfg =>
+                return Bus.Factory.CreateUsingAzureServiceBus(cfg =>
                 {
-                    var host = cfg.Host(
-                        new Uri(hostConfig.RabbitMqAddress),
-                        h =>
-                        {
-                            h.Username(hostConfig.UserName);
-                            h.Password(hostConfig.Password);
-                        });
 
-                    cfg.Durable = hostConfig.Durable;
-                    cfg.PurgeOnStartup = hostConfig.PurgeOnStartup;
+                    var host = cfg.Host(new Uri(hostConfig.Address), h =>
+                    {
+
+                        h.OperationTimeout = TimeSpan.FromSeconds(30);
+                        h.TokenProvider = TokenProvider.CreateSharedAccessSignatureTokenProvider(hostConfig.SharedAccessKeyName, hostConfig.SharedAccessKey);
+                    });
+
 
                     cfg.ReceiveEndpoint(host,
                         "Receive-queue", ep =>
