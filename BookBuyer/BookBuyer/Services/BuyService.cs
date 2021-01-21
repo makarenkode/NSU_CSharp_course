@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using BookShopSecond.Data;
 using Newtonsoft.Json;
 
 namespace BookBuyer.Services

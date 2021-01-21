@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="BookShopSecond.Data">
+      <HintPath>..\..\..\..\C#\BookShopSecond\BookShopSecond\bin\Debug\netcoreapp3.1\BookShopSecond.Data.dll</HintPath>
+    </Reference>
     <Reference Include="ContractLibrary">
       <HintPath>..\..\..\..\C#\ContractLibrary\ContractLibrary\bin\Debug\netcoreapp3.1\ContractLibrary.dll</HintPath>
     </Reference>
