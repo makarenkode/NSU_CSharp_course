@@ -12,9 +12,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using CrystalQuartz.AspNetCore;
 using MassTransit.Azure.ServiceBus.Core;
-using MassTransit.Azure.ServiceBus.Core.Configurators;
 using Microsoft.Azure.ServiceBus.Primitives;
+using Quartz;
 
 namespace BookShop.Web
 {
@@ -89,6 +90,8 @@ namespace BookShop.Web
             {
                 endpoints.MapControllers();
             });
+
+            app.UseCrystalQuartz(() => app.ApplicationServices.GetService<ISchedulerFactory>()?.GetScheduler().Result);
         }
     }
 }

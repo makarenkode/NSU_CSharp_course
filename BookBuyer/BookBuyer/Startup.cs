@@ -1,11 +1,13 @@
 using System.Net.Http;
 using BookBuyer.Extension;
 using BookBuyer.Services;
+using CrystalQuartz.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Quartz;
 
 namespace BookBuyer
 {
@@ -45,6 +47,8 @@ namespace BookBuyer
             {
                 endpoints.MapControllers();
             });
+            
+            app.UseCrystalQuartz(() => app.ApplicationServices.GetService<ISchedulerFactory>().GetScheduler().Result);
         }
     }
 }
