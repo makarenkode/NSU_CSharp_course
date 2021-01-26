@@ -1,0 +1,8 @@
+C:\Users\Данил\C#\ContractLibrary\ContractLibrary\bin\Release\netcoreapp3.1\ContractLibrary.deps.json
+C:\Users\Данил\C#\ContractLibrary\ContractLibrary\bin\Release\netcoreapp3.1\ContractLibrary.dll
+C:\Users\Данил\C#\ContractLibrary\ContractLibrary\bin\Release\netcoreapp3.1\ContractLibrary.pdb
+C:\Users\Данил\C#\ContractLibrary\ContractLibrary\obj\Release\netcoreapp3.1\ContractLibrary.AssemblyInfoInputs.cache
+C:\Users\Данил\C#\ContractLibrary\ContractLibrary\obj\Release\netcoreapp3.1\ContractLibrary.AssemblyInfo.cs
+C:\Users\Данил\C#\ContractLibrary\ContractLibrary\obj\Release\netcoreapp3.1\ContractLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Данил\C#\ContractLibrary\ContractLibrary\obj\Release\netcoreapp3.1\ContractLibrary.dll
+C:\Users\Данил\C#\ContractLibrary\ContractLibrary\obj\Release\netcoreapp3.1\ContractLibrary.pdb
