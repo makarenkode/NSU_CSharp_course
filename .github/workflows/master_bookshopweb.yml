@@ -7,7 +7,8 @@ on:
   push:
     branches:
       - master
-
+env:
+  AZURE_WEBAPP_PACKAGE_PATH: '.' 
 jobs:
   build-and-deploy-bookshopweb:
     runs-on: windows-latest
@@ -26,10 +27,9 @@ jobs:
         dotnet restore
         dotnet build --configuration Release
 
-    - name: dotnet publish
-      run: dotnet publish -c Release -o '${{env.DOTNET_ROOT}}\BookShopSecond'
 
-    - name: Deploy to Azure Web App
+    - name: dotnet publish
+      run: dotnet publish -c Release -o '${{env.AZURE_WEBAPP_PACKAGE_PATH}}/BookShopSecond
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'bookshopweb'
