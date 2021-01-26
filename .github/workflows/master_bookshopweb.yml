@@ -50,6 +50,9 @@ jobs:
 
     - name: Build with dotnet
       run: |
+        cd ConractLibrary
+        dotnet build --configuration Release
+        cd ../
         cd BookProvider
         dotnet restore
         dotnet build --configuration Release
