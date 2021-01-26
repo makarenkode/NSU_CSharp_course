@@ -50,6 +50,8 @@ jobs:
 
     - name: Build with dotnet
       run: |
+        cd ContractLibrary
+        dotnet build --configuration Debug
         cd BookProvider
         dotnet restore
         dotnet build --configuration Release
@@ -78,7 +80,7 @@ jobs:
 
     - name: Build with dotnet
       run: |
-        cd BookShopSecond
+        cd BookBuyer
         dotnet restore
         dotnet build --configuration Release
 
