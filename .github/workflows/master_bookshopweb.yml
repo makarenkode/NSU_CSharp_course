@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  build-and-deploy bookshopweb:
+  build-and-deploy-bookshopweb:
     runs-on: windows-latest
 
     steps:
@@ -37,7 +37,7 @@ jobs:
         publish-profile: ${{ secrets.BOOKSHOP_PUBLISH_PROFILE }}
         package: ${{env.DOTNET_ROOT}}/myapp
      
-  build-and-deploy bookprovider:
+  build-and-deploy-bookprovider:
     runs-on: windows-latest
 
     steps:
@@ -65,7 +65,7 @@ jobs:
         publish-profile: ${{ secrets.BOOKPROVIDER_PUBLISH_PROFILE }}
         package: ${{env.DOTNET_ROOT}}/myapp
         
-  build-and-deploy bookbuyer:
+  build-and-deploy-bookbuyer:
     runs-on: windows-latest
 
     steps:
