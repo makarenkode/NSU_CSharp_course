@@ -50,8 +50,6 @@ jobs:
 
     - name: Build with dotnet
       run: |
-        cd ContractLibrary
-        dotnet build --configuration Debug
         cd BookProvider
         dotnet restore
         dotnet build --configuration Release
