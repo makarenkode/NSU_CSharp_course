@@ -27,7 +27,7 @@ jobs:
         dotnet build --configuration Release
 
     - name: dotnet publish
-      run: dotnet publish -c Release -o '${{env.DOTNET_ROOT}}/BookShopSecond'
+      run: dotnet publish -c Release -o '${{env.DOTNET_ROOT}}/BookShopSecond/BookShop.Web'
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
@@ -35,4 +35,4 @@ jobs:
         app-name: 'bookshopweb'
         slot-name: 'production'
         publish-profile: ${{ secrets.BOOKSHOP_PUBLISH_PROFILE }}
-        package: ${{env.DOTNET_ROOT}}/BookShopSecond
+        package: ${{env.DOTNET_ROOT}}/BookShopSecond/Bookshop.Web
