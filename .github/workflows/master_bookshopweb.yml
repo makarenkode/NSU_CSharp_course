@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  build-and-deploy:
+  build-and-deploy bookshopweb:
     runs-on: windows-latest
 
     steps:
@@ -21,7 +21,10 @@ jobs:
         dotnet-version: '3.1.102'
 
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: |
+        cd BookShopSecond
+        dotnet restore
+        dotnet build --configuration Release
 
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
@@ -31,5 +34,61 @@ jobs:
       with:
         app-name: 'bookshopweb'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_62918eecc20b4318be4fbb325e15b7af }}
+        publish-profile: ${{ secrets.BOOKSHOP_PUBLISH_PROFILE }}
+        package: ${{env.DOTNET_ROOT}}/myapp
+     
+  build-and-deploy bookprovider:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.102'
+
+    - name: Build with dotnet
+      run: |
+        cd BookProvider
+        dotnet restore
+        dotnet build --configuration Release
+
+    - name: dotnet publish
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'bookprovider'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.BOOKPROVIDER_PUBLISH_PROFILE }}
+        package: ${{env.DOTNET_ROOT}}/myapp
+        
+  build-and-deploy bookbuyer:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.102'
+
+    - name: Build with dotnet
+      run: |
+        cd BookShopSecond
+        dotnet restore
+        dotnet build --configuration Release
+
+    - name: dotnet publish
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'bookbuyer'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.BOOKBUYER_PUBLISH_PROFILE }}
         package: ${{env.DOTNET_ROOT}}/myapp 
