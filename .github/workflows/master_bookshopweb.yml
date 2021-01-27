@@ -23,7 +23,7 @@ jobs:
 
     - name: Build and publish with dotnet
       run: |
-        cd Application
+        cd BookShopSecond
         dotnet restore
         dotnet build --configuration Release
         dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/build'
