@@ -28,7 +28,7 @@ jobs:
         dotnet build --configuration Release
 
     - name: dotnet publish
-      run: dotnet publish -c Release -o '${{ D:\a\NSU_CSharp_course\NSU_CSharp_course\BookShopSecond\}}'
+      run: dotnet publish -c Release -o '${{env.DOTNET_ROOT}}/BookShopSecond/'
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
