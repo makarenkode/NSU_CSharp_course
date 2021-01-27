@@ -28,7 +28,7 @@ jobs:
         dotnet build --configuration Release
 
     - name: dotnet publish
-      run: dotnet publish -c Release -o '${{env.AZURE_WEBAPP_PACKAGE_PATH}}\BookShopSecond'
+      run: dotnet publish -c Release -o '${{env.AZURE_WEBAPP_PACKAGE_PATH}}/BookShopSecond/'
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
