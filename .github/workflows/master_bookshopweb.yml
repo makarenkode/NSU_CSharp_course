@@ -24,6 +24,7 @@ jobs:
     - name: Build with dotnet
       run: |
         cd BookShopSecond
+        echo %cd%
         dotnet restore
         dotnet build --configuration Release
 
