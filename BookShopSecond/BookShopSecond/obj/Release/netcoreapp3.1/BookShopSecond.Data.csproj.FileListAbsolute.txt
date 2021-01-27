@@ -1,0 +1,12 @@
+C:\Users\Данил\C#\BookShopSecond\BookShopSecond\bin\Release\netcoreapp3.1\BookShopSecond.Data.deps.json
+C:\Users\Данил\C#\BookShopSecond\BookShopSecond\bin\Release\netcoreapp3.1\BookShopSecond.Data.runtimeconfig.json
+C:\Users\Данил\C#\BookShopSecond\BookShopSecond\bin\Release\netcoreapp3.1\BookShopSecond.Data.runtimeconfig.dev.json
+C:\Users\Данил\C#\BookShopSecond\BookShopSecond\bin\Release\netcoreapp3.1\BookShopSecond.Data.dll
+C:\Users\Данил\C#\BookShopSecond\BookShopSecond\bin\Release\netcoreapp3.1\BookShopSecond.Data.pdb
+C:\Users\Данил\C#\BookShopSecond\BookShopSecond\obj\Release\netcoreapp3.1\BookShopSecond.Data.csprojAssemblyReference.cache
+C:\Users\Данил\C#\BookShopSecond\BookShopSecond\obj\Release\netcoreapp3.1\BookShopSecond.Data.AssemblyInfoInputs.cache
+C:\Users\Данил\C#\BookShopSecond\BookShopSecond\obj\Release\netcoreapp3.1\BookShopSecond.Data.AssemblyInfo.cs
+C:\Users\Данил\C#\BookShopSecond\BookShopSecond\obj\Release\netcoreapp3.1\BookShopSecond.Data.csproj.CoreCompileInputs.cache
+C:\Users\Данил\C#\BookShopSecond\BookShopSecond\obj\Release\netcoreapp3.1\BookShopSecond.Data.dll
+C:\Users\Данил\C#\BookShopSecond\BookShopSecond\obj\Release\netcoreapp3.1\BookShopSecond.Data.pdb
+C:\Users\Данил\C#\BookShopSecond\BookShopSecond\obj\Release\netcoreapp3.1\BookShopSecond.Data.genruntimeconfig.cache
