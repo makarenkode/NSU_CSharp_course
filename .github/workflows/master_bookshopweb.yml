@@ -75,6 +75,8 @@ jobs:
 
     - name: Build and publish with dotnet
       run: |
+        cd ContractLibrary
+        dotnet build --configuration Debug
         cd BookBuyer
         dotnet restore
         dotnet build --configuration Release
