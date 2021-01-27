@@ -35,3 +35,55 @@ jobs:
         slot-name: 'production'
         publish-profile: ${{ secrets.BOOKSHOP_PUBLISH_PROFILE }}
         package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
+        
+  build-and-deploy-bookprovider:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.102'
+
+    - name: Build and publish with dotnet
+      run: |
+        cd BookProvider
+        dotnet restore
+        dotnet build --configuration Release
+        dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/build'
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'bookprovider'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.BOOKPROVIDER_PUBLISH_PROFILE }}
+        package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
+    
+  build-and-deploy-bookbuyer:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.102'
+
+    - name: Build and publish with dotnet
+      run: |
+        cd BookBuyer
+        dotnet restore
+        dotnet build --configuration Release
+        dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/build'
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'bookbuyer'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.BOOKBUYER_PUBLISH_PROFILE }}
+        package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
