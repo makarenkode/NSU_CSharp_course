@@ -11,7 +11,7 @@ env:
   AZURE_WEBAPP_PACKAGE_PATH: '.'
 jobs:
   build-and-deploy-bookshopweb:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@master
@@ -21,14 +21,12 @@ jobs:
       with:
         dotnet-version: '3.1.102'
 
-    - name: Build with dotnet
+    - name: Build and publish with dotnet
       run: |
-        cd BookShopSecond
+        cd Application
         dotnet restore
-        dotnet build --configuration Release --output '${{env.AZURE_WEBAPP_PACKAGE_PATH}}/BookShopSecond'
-
-    - name: dotnet publish
-      run: dotnet publish -c Release -o '${{env.AZURE_WEBAPP_PACKAGE_PATH}}/BookShopSecond/'
+        dotnet build --configuration Release
+        dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/build'
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
@@ -36,4 +34,4 @@ jobs:
         app-name: 'bookshopweb'
         slot-name: 'production'
         publish-profile: ${{ secrets.BOOKSHOP_PUBLISH_PROFILE }}
-        package: ${{env.DOTNET_ROOT}}/BookShopSecond/Bookshop.Web
+        package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
