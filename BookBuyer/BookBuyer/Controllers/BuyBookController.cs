@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using BookBuyer.Services;
-using BookShopSecond.Data;
+using ContractLibrary.JsonModels;
 
 namespace BookBuyer.Controllers
 {
@@ -19,7 +19,7 @@ namespace BookBuyer.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Book>> GetBooks()
+        public async Task<List<JsonBook>> GetBooks()
         {
             return await _buyService.GetBooks();
         }

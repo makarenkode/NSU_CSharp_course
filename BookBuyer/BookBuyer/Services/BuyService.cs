@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using BookShopSecond.Data;
+using ContractLibrary.JsonModels;
 using Newtonsoft.Json;
 
 namespace BookBuyer.Services
@@ -20,7 +20,7 @@ namespace BookBuyer.Services
             _httpClient = httpClient;
         }
 
-        public async Task<List<Book>> GetBooks()
+        public async Task<List<JsonBook>> GetBooks()
         {
 
             var httpRequest = new HttpRequestMessage
@@ -30,7 +30,7 @@ namespace BookBuyer.Services
             };
             var response = await _httpClient.SendAsync(httpRequest);
             var json = await response.Content.ReadAsStringAsync();
-            var books = JsonConvert.DeserializeObject<List<Book>>(json);
+            var books = JsonConvert.DeserializeObject<List<JsonBook>>(json);
             return books;
         }
 
