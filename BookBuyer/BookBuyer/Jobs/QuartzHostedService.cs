@@ -39,7 +39,7 @@ namespace BookBuyer.Jobs
         {
             var trigger = TriggerBuilder.Create()
                 .WithIdentity(nameof(BuyBookJob))
-                .WithSimpleSchedule(x => x.WithIntervalInSeconds(300).RepeatForever())
+                .WithSimpleSchedule(x => x.WithIntervalInSeconds(30).RepeatForever())
                 .Build();
             var job = JobBuilder.Create<BuyBookJob>().WithIdentity(nameof(BuyBookJob)).Build();
             await Scheduler.ScheduleJob(job, trigger);

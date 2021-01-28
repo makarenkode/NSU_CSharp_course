@@ -1,9 +1,0 @@
-C:\Users\Данил\Csharp\ContractLibrary\ContractLibrary\bin\Debug\netcoreapp3.1\ContractLibrary.deps.json
-C:\Users\Данил\Csharp\ContractLibrary\ContractLibrary\bin\Debug\netcoreapp3.1\ContractLibrary.dll
-C:\Users\Данил\Csharp\ContractLibrary\ContractLibrary\bin\Debug\netcoreapp3.1\ContractLibrary.pdb
-C:\Users\Данил\Csharp\ContractLibrary\ContractLibrary\obj\Debug\netcoreapp3.1\ContractLibrary.csprojAssemblyReference.cache
-C:\Users\Данил\Csharp\ContractLibrary\ContractLibrary\obj\Debug\netcoreapp3.1\ContractLibrary.AssemblyInfoInputs.cache
-C:\Users\Данил\Csharp\ContractLibrary\ContractLibrary\obj\Debug\netcoreapp3.1\ContractLibrary.AssemblyInfo.cs
-C:\Users\Данил\Csharp\ContractLibrary\ContractLibrary\obj\Debug\netcoreapp3.1\ContractLibrary.csproj.CoreCompileInputs.cache
-C:\Users\Данил\Csharp\ContractLibrary\ContractLibrary\obj\Debug\netcoreapp3.1\ContractLibrary.dll
-C:\Users\Данил\Csharp\ContractLibrary\ContractLibrary\obj\Debug\netcoreapp3.1\ContractLibrary.pdb

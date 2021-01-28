@@ -25,7 +25,7 @@ namespace BookBuyer.Controllers
         }
 
         [HttpGet, Route("{id}")]
-        public async Task<Book> BuyBook(Guid id)
+        public async Task<JsonBook> BuyBook(Guid id)
         {
             return await _buyService.BuyBook(id);
         }

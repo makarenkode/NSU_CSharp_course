@@ -5,16 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ContractLibrary" Version="1.0.0" />
     <PackageReference Include="CrystalQuartz.AspNetCore" Version="6.11.0.3-beta" />
     <PackageReference Include="JetBrains.Annotations" Version="2020.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Quartz" Version="3.2.4" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="ContractLibrary">
-      <HintPath>..\..\ContractLibrary\ContractLibrary\obj\Debug\netcoreapp3.1\ContractLibrary.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 

@@ -34,7 +34,7 @@ namespace BookBuyer.Services
             return books;
         }
 
-        public async Task<Book> BuyBook(Guid id)
+        public async Task<JsonBook> BuyBook(Guid id)
         {
             var httpRequest = new HttpRequestMessage
             {
@@ -43,7 +43,7 @@ namespace BookBuyer.Services
             };
             var response = await _httpClient.SendAsync(httpRequest);
             var json = await response.Content.ReadAsStringAsync();
-            var book = JsonConvert.DeserializeObject<Book>(json);
+            var book = JsonConvert.DeserializeObject<JsonBook>(json);
             return book;
         }
 
