@@ -11,9 +11,9 @@ namespace BookBuyer.Services
     {
         private readonly HttpClient _httpClient;
 
-        private string _endPoint = "https://bookshopweb.azurewebsites.net/books/";
-        private string _sellTag = "sell/";
-        private string _getTag = "get/";
+        private const string EndPoint = "https://bookshopweb.azurewebsites.net/books/";
+        private const string SellTag = "sell/";
+        private const string GetTag = "get/";
 
         public BuyService(HttpClient httpClient)
         {
@@ -26,7 +26,7 @@ namespace BookBuyer.Services
             var httpRequest = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($"{_endPoint}"),
+                RequestUri = new Uri($"{EndPoint}"),
             };
             var response = await _httpClient.SendAsync(httpRequest);
             var json = await response.Content.ReadAsStringAsync();
@@ -39,7 +39,7 @@ namespace BookBuyer.Services
             var httpRequest = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($"{_endPoint}{_sellTag}{id.ToString()}"),
+                RequestUri = new Uri($"{EndPoint}{SellTag}{id.ToString()}"),
             };
             var response = await _httpClient.SendAsync(httpRequest);
             var json = await response.Content.ReadAsStringAsync();
@@ -52,7 +52,7 @@ namespace BookBuyer.Services
             var httpRequest = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($"{_endPoint}{_getTag}{genre}"),
+                RequestUri = new Uri($"{EndPoint}{GetTag}{genre}"),
             };
             var response = await _httpClient.SendAsync(httpRequest);
             var json = await response.Content.ReadAsStringAsync();
@@ -64,7 +64,7 @@ namespace BookBuyer.Services
             var httpRequest = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($"{_endPoint}{_getTag}"),
+                RequestUri = new Uri($"{EndPoint}{GetTag}"),
             };
             var response = await _httpClient.SendAsync(httpRequest);
             var json = await response.Content.ReadAsStringAsync();
